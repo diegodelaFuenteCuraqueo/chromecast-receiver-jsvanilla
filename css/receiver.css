@@ -1,5 +1,50 @@
+
+
+cast-media-player {
+  /* Imagen (o gradiente) de fondo del player */
+  /* --background-image: linear-gradient(rgba(255,255,255,.5), black); */
+  
+  /* Logo visible en el centro */
+  /* --logo-image      : url('https://s10.gifyu.com/images/LOGO1f2b8b21f4db9928.png'); */
+  
+  /* Icono que gira debajo del --logo-image  (buffering)*/
+  /* --spinner-image   : url('https://s10.gifyu.com/images/SPINNER.png'); */
+  
+  /* - - - -  Botones del player - - - - */
+  /* --play-image      : url('https://s10.gifyu.com/images/PLAY.png');
+  --pause-image     : url('https://s10.gifyu.com/images/PAUSE.png');
+  --playback-logo-image: url('http://platform.s-mdstrm.com/player/logo/57f40aeadc5b9f3075c49cb8.png');
+   */
+   
+  /* Color barra de reproducción (progreso) */
+  --progress-color  : red;
+
+  /* Icono que gira mientras carga el buffer (a la izquierda de la barra de reproducción) */
+  /* --buffering-image : url('https://s10.gifyu.com/images/BUFFERING.png'); */
+
+  /* Thumbnail ubicado a la derecha de la barra de reproducción */
+  /* --watermark-image: url('https://s10.gifyu.com/images/thumb.png');  */
+/* 
+  --splash-image    : url('http://platform.s-mdstrm.com/player/logo/57f40aeadc5b9f3075c49cb8.png');
+  --splash-size     : cover; */
+
+  /* Imágenes que se presentarán sucesivamente al finalizar reproducción (max.10, reemplaza splash)*/
+  /* --slideshow-interval-duration: 5s;
+  --slideshow-animation-duration: 3s;
+  --slideshow-image-1: url('https://st2.depositphotos.com/4112313/6977/v/600/depositphotos_69779337-stock-illustration-abstract-bright-blue-geometric-background.jpg');
+  --slideshow-image-2: url('https://media.istockphoto.com/vectors/abstract-blurred-colorful-background-vector-id1248542684?k=20&m=1248542684&s=612x612&w=0&h=1yKiRrtPhiqUJXS_yJDwMGVHVkYRk2pJX4PG3TT4ZYM=');
+  --slideshow-image-3: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.1185620019.1641859200'); */
+
+  /* TODO : ...otras cosas que aún no sé bien qué son */
+  --break-color     : red;
+  /* Tono del player (default=42) */
+  --theme-hue       : 88;
+  --skip-ad-title   : "saltar publicidad";
+}
+
+
 cast-media-player:after {
-  content: "Chromecast testing";
+  content: " testing";
   color: rgba(255, 255, 255, .5);
   position: absolute;
   top: 20%;
