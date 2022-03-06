@@ -34,11 +34,10 @@ playerManager.addEventListener(window.cast.framework.events.category.CORE, updat
 context.addCustomMessageListener(NAMESPACE, (customEvent) => { console.log(" * " + customEvent) })
 context.start()
 
-// const messageToSender = (event) => {
-//   try{
-//     console.log(event)
-//     context.sendCustomMessage(NAMESPACE, event.senderId, event)
-//   }catch(error){
-//     console.log(`ERROR :${error}`)
-//   }
-// }
+class SimpleChromecastReceiver {
+
+  constructor(castMediaPlayerElement){
+    this.castMediaPlayerElement = castMediaPlayerElement
+  }
+
+}
