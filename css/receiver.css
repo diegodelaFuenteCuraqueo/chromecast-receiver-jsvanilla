@@ -1,5 +1,3 @@
-
-
 cast-media-player {
   /* Imagen (o gradiente) de fondo del player */
   /* --background-image: linear-gradient(rgba(255,255,255,.5), black); */
@@ -41,7 +39,6 @@ cast-media-player {
   --theme-hue       : 88;
   --skip-ad-title   : "saltar publicidad";
 }
-
 
 cast-media-player:after {
   content: " testing";

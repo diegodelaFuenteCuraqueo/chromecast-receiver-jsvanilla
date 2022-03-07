@@ -1,4 +1,3 @@
-
 const messageToSender = (NAMESPACE, context) => (event) => {
   try{
     console.log(event)
@@ -8,6 +7,7 @@ const messageToSender = (NAMESPACE, context) => (event) => {
   }
 }
 
+//curried function...
 export const messageToSenderBuilder = (NAMESPACE, context) => {
   console.log ('building messageToSender')
   return messageToSender(NAMESPACE, context)
