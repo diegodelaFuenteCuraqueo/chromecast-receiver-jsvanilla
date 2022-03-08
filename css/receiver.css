@@ -22,7 +22,7 @@ cast-media-player {
 
   /* Thumbnail ubicado a la derecha de la barra de reproducción */
   /* --watermark-image: url('https://s10.gifyu.com/images/thumb.png');  */
-/* 
+  /* 
   --splash-image    : url('http://platform.s-mdstrm.com/player/logo/57f40aeadc5b9f3075c49cb8.png');
   --splash-size     : cover; */
 
@@ -41,7 +41,7 @@ cast-media-player {
 }
 
 cast-media-player:after {
-  content: " testing";
+  /* content: " testing"; */
   color: rgba(255, 255, 255, .5);
   position: absolute;
   top: 20%;

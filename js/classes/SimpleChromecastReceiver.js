@@ -26,7 +26,7 @@ export default class SimpleChromecastReceiver {
     )
     this.context.addCustomMessageListener(
       NAMESPACE, 
-      (customEvent) => { console.log(" * " + customEvent) }
+      customEvent => { console.log(" * " + customEvent) }
     )
   }
   
