@@ -9,13 +9,12 @@ cast-media-player {
   /* --spinner-image   : url('https://s10.gifyu.com/images/SPINNER.png'); */
   
   /* - - - -  Botones del player - - - - */
-  /* --play-image      : url('https://s10.gifyu.com/images/PLAY.png');
-  --pause-image     : url('https://s10.gifyu.com/images/PAUSE.png');
-  --playback-logo-image: url('http://platform.s-mdstrm.com/player/logo/57f40aeadc5b9f3075c49cb8.png');
-   */
-   
+  --play-image : url('/css/assets/IconsChromecast/chromecast_icons_light/cast_icon_play/web/play-light.png'); 
+  --pause-image: url('/css/assets/IconsChromecast/chromecast_icons_light/cast_icon_pause/web/pause-light.png'); 
+  --stop-image: url('/css/assets/IconsChromecast/chromecast_icons_light/cast_icon_stop/web/stop-light.png'); 
+
   /* Color barra de reproducción (progreso) */
-  --progress-color  : red;
+  --progress-color  : rgb(166,214,66);
 
   /* Icono que gira mientras carga el buffer (a la izquierda de la barra de reproducción) */
   /* --buffering-image : url('https://s10.gifyu.com/images/BUFFERING.png'); */
@@ -34,7 +33,7 @@ cast-media-player {
   --slideshow-image-3: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.1185620019.1641859200'); */
 
   /* TODO : ...otras cosas que aún no sé bien qué son */
-  --break-color     : red;
+  --break-color     : #97d700;
   /* Tono del player (default=42) */
   --theme-hue       : 88;
   --skip-ad-title   : "saltar publicidad";
