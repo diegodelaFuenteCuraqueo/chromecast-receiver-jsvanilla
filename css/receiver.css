@@ -9,9 +9,9 @@ cast-media-player {
   /* --spinner-image   : url('https://s10.gifyu.com/images/SPINNER.png'); */
   
   /* - - - -  Botones del player - - - - */
-  --play-image : url('/docs/assets/IconsChromecast/chromecast_icons_light/cast_icon_play/web/play-light.png'); 
-  --pause-image: url('/docs/assets/IconsChromecast/chromecast_icons_light/cast_icon_pause/web/pause-light.png'); 
-  --stop-image: url('/docs/assets/IconsChromecast/chromecast_icons_light/cast_icon_stop/web/stop-light.png'); 
+  --play-image : url('/assets/IconsChromecast/chromecast_icons_light/cast_icon_play/web/play-light.png'); 
+  --pause-image: url('/assets/IconsChromecast/chromecast_icons_light/cast_icon_pause/web/pause-light.png'); 
+  --stop-image: url('/assets/IconsChromecast/chromecast_icons_light/cast_icon_stop/web/stop-light.png'); 
 
   /* Color barra de reproducción (progreso) */
   --progress-color  : rgb(166,214,66);

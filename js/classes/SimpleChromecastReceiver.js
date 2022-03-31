@@ -1,5 +1,3 @@
-'use strict'
-
 import { bindStreamMetrics }      from '../utils/bindStreamMetrics.js'
 import { messageToSenderBuilder } from '../utils/messageToSender.js'
 
@@ -7,15 +5,14 @@ const NAMESPACE = 'urn:x-cast:com.example.cast.events'
 
 export default class SimpleChromecastReceiver {
   constructor(){
-    this.context                = cast.framework.CastReceiverContext.getInstance()
-    this.playerManager          = this.context.getPlayerManager() 
-    this.messageToSender        = messageToSenderBuilder(NAMESPACE, this.context)
-    // this.castMediaPlayerElement = 
-    this.videoElement           = document.getElementsByTagName('cast-media-player')[0].shadowRoot.getElementById('castMediaElement') 
-    this.controls               = cast.framework.ui.Controls.getInstance();
-    this.playerData             = new cast.framework.ui.PlayerData();
-    this.playerDataBinder       = new cast.framework.ui.PlayerDataBinder(this.playerData);
-    this.customData             = {}
+    this.context          = cast.framework.CastReceiverContext.getInstance()
+    this.playerManager    = this.context.getPlayerManager() 
+    this.messageToSender  = messageToSenderBuilder(NAMESPACE, this.context)
+    this.videoElement     = document.getElementsByTagName('cast-media-player')[0].shadowRoot.getElementById('castMediaElement') 
+    this.controls         = cast.framework.ui.Controls.getInstance()
+    this.playerData       = new cast.framework.ui.PlayerData()
+    this.playerDataBinder = new cast.framework.ui.PlayerDataBinder(this.playerData)
+    this.customData       = {}
 
     this.bindButtons()
     this._init()
@@ -43,7 +40,12 @@ export default class SimpleChromecastReceiver {
     this.messageToSender(status)
     if(status.type === 'REQUEST_LOAD') {
       this.customData = { ...status.requestData.media.customData }
-      bindStreamMetrics(this.customData.streamMetricsOptions, this.videoElement, this.customData.metricsHost)
+      console.log('_updateCastStatus', this.customData)
+      bindStreamMetrics(
+        this.customData.streamMetricsOptions,
+        this.videoElement,
+        this.customData.metricsHost
+      )
     }
   }
 
@@ -55,10 +57,9 @@ export default class SimpleChromecastReceiver {
     this.videoElement.addEventListener('seeking',     (e) => this.messageToSender({ type:'seeking', destinationTime:e.srcElement.currentTime, ...e }))
     this.videoElement.addEventListener('seek',        (e) => this.messageToSender({ type:'seek', destinationTime:e.srcElement.currentTime, ...e }))
     this.videoElement.addEventListener('timeupdate',  (e) => this.messageToSender({ type:'timeupdate', currentTime: e.srcElement.currentTime, ...e }))
-    this.videoElement.addEventListener('volumechange',(e) => this.messageToSender({ type:'volumechange', volume: e.target.volume, muted:e.target.muted, ...e }))  
   }
 
-  bindButtons(){
+  bindButtons(){ // TODO (investigar botoncitos)
     this.playerDataBinder.addEventListener(
       cast.framework.ui.PlayerDataEventType.MEDIA_CHANGED,
       (e) => {
